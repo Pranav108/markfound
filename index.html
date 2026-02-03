@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>markfound - Markdown Editor with Mermaid</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%232ea043'>m</text></svg>">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <span class="logo-mark">mark</span><span class="logo-found">found</span>
+        </div>
+        <div class="header-buttons">
+            <a href="https://github.com/Pranav108" target="_blank" class="info-btn">
+                <span class="info-tooltip">Created by Pranav</span>
+                ⓘ
+            </a>
+            <button class="fullscreen-btn" id="fullscreenBtn" title="Preview fullscreen">⛶</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="editor-panel" id="editorPanel">
+            <div class="editor-header">Markdown Editor</div>
+            <textarea class="editor" id="editor" placeholder="Type your markdown here..."># Welcome to Markfound Editor!
+
+This editor supports **full Markdown** syntax with *Mermaid* diagrams.
+
+## Features
+- Real-time preview
+- Dark theme
+- Resizable panels
+- Mermaid diagram support
+- Fullscreen mode
+
+## Try a Mermaid Diagram
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it?}
+    B -->|Yes| C[OK]
+    C --> D[Rethink]
+    D --> B
+    B -->|No| E[End]
+```
+
+## Code Example
+
+```javascript
+function hello() {
+    console.log('Hello, World!');
+}
+```
+
+## List Example
+1. First item
+2. Second item
+3. Third item
+
+**Bold text** and *italic text* and `inline code`
+
+> This is a blockquote
+
+[Link to Author](https://github.com/Pranav108)</textarea>
+        </div>
+        
+        <div class="separator" id="separator"></div>
+        
+        <div class="preview-panel">
+            <div class="preview-header">Preview</div>
+            <div class="preview" id="preview"></div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
